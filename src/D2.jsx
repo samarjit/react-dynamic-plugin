@@ -1,7 +1,5 @@
 import React from 'react';
 
-
-
 export default class D2 extends React.Component {
 
   constructor(){
@@ -15,5 +13,3 @@ export default class D2 extends React.Component {
   }
 
 };
-
-

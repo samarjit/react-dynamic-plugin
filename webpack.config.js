@@ -5,7 +5,7 @@ var BUILD_DIR = path.resolve(__dirname, 'dist');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
-  mode: 'development',
+  // mode: 'development',
   // devtool: 'cheap-module-eval-source-map',
   entry: {
     main: APP_DIR + '/index.jsx',
@@ -15,20 +15,20 @@ var config = {
     path: BUILD_DIR,
     filename: '[name].bundle.js',
     library: 'main',
-    libraryTarget:'var'
+    libraryTarget:'window'
   },
   externals: {
     react: {
       commonjs: 'react',
       commonjs2: 'react',
       amd: 'react',
-      root: 'React'
+      window: 'React'
     },
     'react-dom': {
       commonjs: 'react-dom',
       commonjs2: 'react-dom',
       amd: 'react-dom',
-      root: 'ReactDOM'
+      window: 'ReactDOM'
     }
   },
   module : {
@@ -40,7 +40,9 @@ var config = {
       }
     ]
   },
-  
+  optimization: {
+    namedModules: true,
+  },
   resolve: {
     extensions: ['.js', '.jsx'],
   }
