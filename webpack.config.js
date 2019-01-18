@@ -40,9 +40,9 @@ var config = {
       }
     ]
   },
-  optimization: {
-    namedModules: true,
-  },
+  // optimization: {
+  //   namedModules: true,
+  // },
   resolve: {
     extensions: ['.js', '.jsx'],
   }
