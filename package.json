@@ -3,7 +3,7 @@
   "repository": "https://github.com/samarjit/react-dynamic-plugin.git",
   "license": "MIT",
   "devDependencies": {
-    "webpack": "^3.0.0",
+    "webpack": "^4.0.0",
     "webpack-cli": "^3.2.1"
   },
   "dependencies": {

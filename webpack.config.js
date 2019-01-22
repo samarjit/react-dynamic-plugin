@@ -5,8 +5,9 @@ var BUILD_DIR = path.resolve(__dirname, 'dist');
 var APP_DIR = path.resolve(__dirname, 'src');
 
 var config = {
-  // mode: 'development',
+  mode: 'development',
   // devtool: 'cheap-module-eval-source-map',
+  devtool: 'source-map',
   entry: {
     main: APP_DIR + '/index.jsx',
     // D1: APP_DIR + '/execload.js'
@@ -18,6 +19,7 @@ var config = {
     libraryTarget:'window'
   },
   externals: {
+    './vendor': 'vendor',
     react: {
       commonjs: 'react',
       commonjs2: 'react',
@@ -40,9 +42,6 @@ var config = {
       }
     ]
   },
-  // optimization: {
-  //   namedModules: true,
-  // },
   resolve: {
     extensions: ['.js', '.jsx'],
   }

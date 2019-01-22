@@ -1,6 +1,8 @@
 import App from './App';
-import ReactDOM from 'react-dom';
+import vendor from './vendor';
 
 export function load() {
-    ReactDOM.render(<App/>, document.getElementById('output'));
+    window.React = vendor.React; 
+    //This line becomes React.createElement(...) -> React will be null if not defined on window.
+    vendor.ReactDOM.render(<App/>, document.getElementById('output'));
 }

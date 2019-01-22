@@ -3,6 +3,7 @@ var APP_DIR = path.resolve(__dirname, 'src');
 
 module.exports = {
   mode: 'development',
+  devtool: 'source-map',
   entry: {
     D1: './src/D1.jsx',
     D2: './src/D2.jsx',
@@ -14,6 +15,7 @@ module.exports = {
     libraryTarget:'window'
   },
   externals: {
+    './vendor': 'vendor',
     react: {
       commonjs: 'react',
       commonjs2: 'react',
@@ -29,5 +31,8 @@ module.exports = {
             loader : 'babel-loader'
         }
     ]
-  }
+  },
+  optimization: {
+    namedModules: true,
+  },
 };

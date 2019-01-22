@@ -1,4 +1,4 @@
-class App extends window.React.Component {
+class App extends vendor.React.Component {
 
   constructor(){
     super();
